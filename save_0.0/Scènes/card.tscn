@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cumgflytqx6ay"]
+
+[ext_resource type="Script" uid="uid://b0vaboqtti73a" path="res://Scripts/Card.gd" id="1_kikvd"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_4lyyh"]
+
+[node name="Card" type="Control" unique_id=684853742]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kikvd")
+
+[node name="Panel" type="Panel" parent="." unique_id=1391298006]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ManaCost" type="Label" parent="Panel" unique_id=1505273759]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1330761131]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 50.0
+
+[node name="CardImage" type="TextureRect" parent="Panel/VBoxContainer" unique_id=2083009567]
+layout_mode = 2
+texture = SubResource("ImageTexture_4lyyh")
+
+[node name="CardName" type="Label" parent="Panel/VBoxContainer" unique_id=185939292]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="Panel/VBoxContainer" unique_id=503565776]
+layout_mode = 2

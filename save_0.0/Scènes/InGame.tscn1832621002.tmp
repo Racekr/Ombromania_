@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://42oe4ao00m1j"]
+
+[ext_resource type="Script" uid="uid://cw6ajwvqlho6x" path="res://Scripts/InGame.gd" id="1_7pk7b"]
+[ext_resource type="PackedScene" uid="uid://cumgflytqx6ay" path="res://Scènes/card.tscn" id="2_g1n37"]
+
+[node name="InGame" type="Control" unique_id=1360778174]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7pk7b")
+card_scene = ExtResource("2_g1n37")
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=1093640887]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1702887284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=844027255]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 26.0
+offset_right = 1152.0
+offset_bottom = 114.0
+alignment = 1
+
+[node name="Player2" type="CenterContainer" parent="HBoxContainer" unique_id=1963109353]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player2" unique_id=346537279]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player2/VBoxContainer" unique_id=1461330990]
+layout_mode = 2
+text = "Player 2"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player2/VBoxContainer" unique_id=17396218]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+step = 1.0
+
+[node name="Player3" type="CenterContainer" parent="HBoxContainer" unique_id=363160835]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player3" unique_id=712808203]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player3/VBoxContainer" unique_id=1335527420]
+layout_mode = 2
+text = "Player 3"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player3/VBoxContainer" unique_id=418500663]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player4" type="CenterContainer" parent="HBoxContainer" unique_id=45009530]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player4" unique_id=835424123]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player4/VBoxContainer" unique_id=896311780]
+layout_mode = 2
+text = "Player 4"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player4/VBoxContainer" unique_id=1795880837]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player5" type="CenterContainer" parent="HBoxContainer" unique_id=408531991]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player5" unique_id=107647540]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player5/VBoxContainer" unique_id=739816730]
+layout_mode = 2
+text = "Player 5"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player5/VBoxContainer" unique_id=1606187484]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player6" type="CenterContainer" parent="HBoxContainer" unique_id=1289233124]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player6" unique_id=1759365773]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player6/VBoxContainer" unique_id=838682679]
+layout_mode = 2
+text = "Player 6"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player6/VBoxContainer" unique_id=1917350374]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player7" type="CenterContainer" parent="HBoxContainer" unique_id=1994154897]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player7" unique_id=542402902]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player7/VBoxContainer" unique_id=1844732268]
+layout_mode = 2
+text = "Player 7"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player7/VBoxContainer" unique_id=40802991]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player8" type="CenterContainer" parent="HBoxContainer" unique_id=1348239645]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player8" unique_id=1145886915]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player8/VBoxContainer" unique_id=778280098]
+layout_mode = 2
+text = "Player 8"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player8/VBoxContainer" unique_id=284495785]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player9" type="CenterContainer" parent="HBoxContainer" unique_id=1318698174]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player9" unique_id=2068517078]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player9/VBoxContainer" unique_id=51087836]
+layout_mode = 2
+text = "Player 9"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player9/VBoxContainer" unique_id=950482429]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player10" type="CenterContainer" parent="HBoxContainer" unique_id=2109363461]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player10" unique_id=630696027]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player10/VBoxContainer" unique_id=1264973033]
+layout_mode = 2
+text = "Player 10"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player10/VBoxContainer" unique_id=1201732671]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player11" type="CenterContainer" parent="HBoxContainer" unique_id=1837545244]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player11" unique_id=2092119099]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player11/VBoxContainer" unique_id=202218437]
+layout_mode = 2
+text = "Player 11"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player11/VBoxContainer" unique_id=1307522339]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player12" type="CenterContainer" parent="HBoxContainer" unique_id=1409751819]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Player12" unique_id=1336324747]
+layout_mode = 2
+
+[node name="Label" type="Button" parent="HBoxContainer/Player12/VBoxContainer" unique_id=1784599904]
+layout_mode = 2
+text = "Player 12"
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Player12/VBoxContainer" unique_id=192660525]
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 2
+
+[node name="Player1" type="CenterContainer" parent="." unique_id=1678225361]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 603.0
+offset_right = 1155.0
+offset_bottom = 647.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player1" unique_id=1473190114]
+layout_mode = 2
+
+[node name="ManaLabel" type="Label" parent="Player1/HBoxContainer" unique_id=386922113]
+layout_mode = 2
+text = "Mana"
+
+[node name="Label" type="Label" parent="Player1/HBoxContainer" unique_id=1761844211]
+layout_mode = 2
+text = "You"
+
+[node name="ProgressBAr" type="ProgressBar" parent="Player1/HBoxContainer" unique_id=1697668430]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+step = 0.1
+value = 100.0
+
+[node name="TimeLabel" type="Label" parent="." unique_id=1366301538]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -26.0
+offset_right = 56.0
+grow_vertical = 0
+text = "10 : 01"
+horizontal_alignment = 1
+
+[node name="PhaseLabel" type="Label" parent="." unique_id=2047817333]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 28.0
+offset_right = 39.0
+offset_bottom = 54.0
+text = "Jour"
+horizontal_alignment = 1
+
+[node name="DayLabel" type="Label" parent="." unique_id=1588590059]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 27.0
+text = "Tour"
+horizontal_alignment = 1
+
+[node name="DeckLabel" type="Label" parent="." unique_id=2131977382]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_bottom = 28.0
+grow_horizontal = 0
+text = "Enfant"
+horizontal_alignment = 1
+
+[node name="CampLabel" type="Label" parent="." unique_id=1123625243]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -27.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Méchant"
+horizontal_alignment = 1
+
+[node name="RefreshTimer" type="Timer" parent="." unique_id=1523714787]
+
+[node name="NextButton" type="Button" parent="." unique_id=1688220860]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 252.0
+offset_right = 846.0
+offset_bottom = 283.0
+text = "Suivant"
+
+[node name="PreviousButton" type="Button" parent="." unique_id=407398117]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 253.0
+offset_right = 385.0
+offset_bottom = 284.0
+text = "Précédent"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=229870088]

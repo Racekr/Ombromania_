@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://1lyi1kg1f8iv"]
+
+[ext_resource type="Script" uid="uid://b5o1ogvtpoldm" path="res://Scripts/connexion.gd" id="1_hrrn7"]
+[ext_resource type="FontFile" uid="uid://ddpw88mu21add" path="res://Fonts/00737_ABADC.ttf" id="2_bcg3r"]
+[ext_resource type="FontFile" uid="uid://b5lkbj7hptdou" path="res://Fonts/07558_CenturyGothic.ttf" id="3_qb68o"]
+[ext_resource type="FontFile" uid="uid://dxt3lpseb35of" path="res://Fonts/09983_crazk___.ttf" id="4_yhaty"]
+[ext_resource type="FontFile" uid="uid://cqlxvx73dogeg" path="res://Fonts/33713_SerpentineBoldItalic.ttf" id="5_kwfxs"]
+[ext_resource type="FontFile" uid="uid://d2rcmvvuo3s5l" path="res://Fonts/34460_SHAL____.ttf" id="6_3m2ws"]
+[ext_resource type="FontFile" uid="uid://bifjxc7ce1edc" path="res://Fonts/acquestscript.ttf" id="7_hff88"]
+[ext_resource type="FontFile" uid="uid://crd583n5h8sg2" path="res://Fonts/CRAZB___.TTF" id="8_jqo43"]
+[ext_resource type="FontFile" uid="uid://f2xhwgk2xka4" path="res://Fonts/crazyWriterz.ttf" id="9_rjwbr"]
+[ext_resource type="FontFile" uid="uid://7rxk5k2mq444" path="res://Fonts/Mistral.ttf" id="10_djak6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hrrn7"]
+font_size = 75
+font_color = Color(0.5333333, 0, 1, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_bcg3r"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hrrn7")
+fonts = Array[FontFile]([ExtResource("2_bcg3r"), ExtResource("3_qb68o"), ExtResource("4_yhaty"), ExtResource("5_kwfxs"), ExtResource("6_3m2ws"), ExtResource("7_hff88"), ExtResource("8_jqo43"), ExtResource("9_rjwbr"), ExtResource("10_djak6")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Ombromania" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -205.0
+offset_right = 138.5
+offset_bottom = -137.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ombromania"
+label_settings = SubResource("LabelSettings_hrrn7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inscription/Connexion :"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ID" type="HBoxContainer" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer/ID"]
+layout_mode = 2
+text = "ID :                "
+label_settings = SubResource("LabelSettings_bcg3r")
+
+[node name="Id" type="LineEdit" parent="CenterContainer/VBoxContainer/VBoxContainer/ID"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+draw_control_chars = true
+
+[node name="Password" type="HBoxContainer" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer/Password"]
+layout_mode = 2
+text = "Password :  "
+
+[node name="Password" type="LineEdit" parent="CenterContainer/VBoxContainer/VBoxContainer/Password"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Login_Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Login"
+
+[node name="Register_Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Register"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="text_submitted" from="CenterContainer/VBoxContainer/VBoxContainer/ID/Id" to="." method="_on_id_text_submitted"]
+[connection signal="text_submitted" from="CenterContainer/VBoxContainer/VBoxContainer/Password/Password" to="." method="_on_password_text_submitted"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Login_Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Register_Button" to="." method="_on_button_pressed"]

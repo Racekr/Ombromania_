@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhx0ifgr0b6r3"]
+
+[ext_resource type="Script" uid="uid://bssxp3m8onaqo" path="res://Scripts/Join.gd" id="1_3q14x"]
+
+[node name="Join" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3q14x")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 647.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LobbyList" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

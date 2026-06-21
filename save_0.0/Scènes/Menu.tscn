@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://c1tg6w0qqqiix"]
+
+[ext_resource type="Script" uid="uid://b2ncuphi7x8lg" path="res://Scripts/menu.gd" id="1_80kff"]
+
+[node name="Menu" type="Control" unique_id=1454527004]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80kff")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2092735717]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=684747165]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 617.0
+offset_right = 1148.0
+offset_bottom = 650.0
+
+[node name="Commande_LineEdit" type="LineEdit" parent="VBoxContainer" unique_id=138145291]
+layout_mode = 2
+
+[node name="PseudoContrainer" type="VBoxContainer" parent="." unique_id=587516351]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 151.0
+offset_bottom = 61.0
+
+[node name="PseudoLabel" type="Label" parent="PseudoContrainer" unique_id=1042962265]
+layout_mode = 2
+
+[node name="TitreLabel" type="Label" parent="PseudoContrainer" unique_id=61638429]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=284978364]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 53
+alignment = 1
+
+[node name="CreateButton" type="Button" parent="VBoxContainer2" unique_id=838066500]
+layout_mode = 2
+text = "Créer une partie"
+
+[node name="JoinButton" type="Button" parent="VBoxContainer2" unique_id=1796748595]
+layout_mode = 2
+text = "Rejoindre une partie"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer2" unique_id=260822192]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+text = "Quitter"
+
+[connection signal="pressed" from="VBoxContainer2/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
